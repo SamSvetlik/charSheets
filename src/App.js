@@ -1,6 +1,7 @@
 import './App.css';
 import React, {useState} from 'react';
 import Dropdown from "./components/Dropdown"
+import Stats from './components/Stats';
 
 const memphis = {
   "name": "MEMPHIS",
@@ -77,6 +78,7 @@ function App() {
   return (
     <div className="App">
       <Dropdown />
+      <Stats stats={char.stats}/>
       
     </div>
   );
