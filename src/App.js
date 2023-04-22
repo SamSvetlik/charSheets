@@ -2,6 +2,8 @@ import './App.css';
 import React, {useState} from 'react';
 import Dropdown from "./components/Dropdown"
 import Stats from './components/Stats';
+import NumberComponent from './components/NumberComponent';
+import TextComponent from './components/TextComponent';
 
 const memphis = {
   "name": "MEMPHIS",
@@ -21,9 +23,10 @@ const memphis = {
       "wis": 7,
       "cha": 13
   },
+  "proficiencyBonus": 4,
   "throws": ["STR", "CON"],
   "skills": ["Animal Handling", "Athletics", "Deception", "Indimidation", "Nature", "Perception", "Survival"],
-  "bio": "Memphis wandered into the Feywild as a child. After many years, he found his way out, but the years alone and the ambient magics had changed him. He preferred to live alone in the forest, but could be persuaded to help out with promises of treats.",
+  "bio": ["Memphis wandered into the Feywild as a child. After many years, he found his way out, but the years alone and the ambient magics had changed him. He preferred to live alone in the forest, but could be persuaded to help out with promises of treats."],
   "maxHP": 125,
   "AC": 19,
   "initiative": 6,
@@ -79,7 +82,11 @@ function App() {
     <div className="App">
       <Dropdown />
       <Stats stats={char.stats}/>
-      
+      <NumberComponent num={char.proficiencyBonus} str="Proficiency Bonus" />
+      <NumberComponent num={char.AC} str="Armor Class" />
+      <NumberComponent num={char.initiative} str="Initiative" />
+      <TextComponent arr={char.bio} str="Character Biography" />
+      <TextComponent arr={char.features} str="Features & Traits" />
     </div>
   );
 }
