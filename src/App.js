@@ -6,6 +6,7 @@ import NumberComponent from './components/NumberComponent';
 import TextComponent from './components/TextComponent';
 import SavingThrows from './components/SavingThrows';
 import Skill from './components/Skill';
+import Attacks from './components/Attacks';
 
 const memphis = {
   "name": "MEMPHIS",
@@ -163,8 +164,16 @@ function App() {
       <Skill className="skills" profArray={char.skills} stats={char.stats} proficiencyBonus={char.proficiencyBonus} getAbilityModifier={getAbilityModifier} />
       <NumberComponent className="armorClass" num={char.AC} str="Armor Class" />
       <NumberComponent className="initiative" num={char.initiative} str="Initiative" />
+      <NumberComponent className="speed" num={char.speed} str="Speed" />
+      <NumberComponent className="maxHP" num={char.maxHP} str="Current Hit Points" />
+      <NumberComponent className="tempHP" num={0} str="Temporary Hit Points" />
+      <NumberComponent className="hitDice" num={char.hitDice} str="Hit Dice" />
+      {/* DeathSaves component goes here */}
       <TextComponent className="bio" arr={char.bio} str="Character Biography" />
+      <Attacks className="attacks" attacks={char.attacks} />
       <TextComponent className="features" arr={char.features} str="Features & Traits" />
+      <NumberComponent className="passiveWisdom" num={getAbilityModifier(char.stats.WIS) + 10} str="Passive Wisdom (Perception)" />
+      <TextComponent className="equipment" arr={char.equipment} str="Equipment" />
     </div>
   );
 }
