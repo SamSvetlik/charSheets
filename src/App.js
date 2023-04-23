@@ -81,12 +81,12 @@ function App() {
   return (
     <div className="App">
       <Dropdown />
-      <Stats stats={char.stats}/>
-      <NumberComponent num={char.proficiencyBonus} str="Proficiency Bonus" />
-      <NumberComponent num={char.AC} str="Armor Class" />
-      <NumberComponent num={char.initiative} str="Initiative" />
-      <TextComponent arr={char.bio} str="Character Biography" />
-      <TextComponent arr={char.features} str="Features & Traits" />
+      <Stats stats={char.stats} className="stats" />
+      <NumberComponent num={char.proficiencyBonus} str="Proficiency Bonus" className="proficiencyBonus" />
+      <NumberComponent num={char.AC} str="Armor Class" className="armorClass" />
+      <NumberComponent num={char.initiative} str="Initiative" className="initiative" />
+      <TextComponent arr={char.bio} str="Character Biography" className="bio" />
+      <TextComponent arr={char.features} str="Features & Traits" className="features" />
     </div>
   );
 }
