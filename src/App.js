@@ -7,6 +7,7 @@ import TextComponent from './components/TextComponent';
 import SavingThrows from './components/SavingThrows';
 import Skill from './components/Skill';
 import Attacks from './components/Attacks';
+import DeathSaves from './components/DeathSaves';
 
 const memphis = {
   "name": "MEMPHIS",
@@ -168,7 +169,7 @@ function App() {
       <NumberComponent className="maxHP" num={char.maxHP} str="Current Hit Points" />
       <NumberComponent className="tempHP" num={0} str="Temporary Hit Points" />
       <NumberComponent className="hitDice" num={char.hitDice} str="Hit Dice" />
-      {/* DeathSaves component goes here */}
+      <DeathSaves />
       <TextComponent className="bio" arr={char.bio} str="Character Biography" />
       <Attacks className="attacks" attacks={char.attacks} />
       <TextComponent className="features" arr={char.features} str="Features & Traits" />
