@@ -60,6 +60,7 @@
 .proficiencyBonus {
   grid-area: proficiency;
   height: fit-content;
+  
 }
 
 .savingThrows {

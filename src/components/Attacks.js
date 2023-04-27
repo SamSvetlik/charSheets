@@ -3,7 +3,7 @@
 export default function Attacks(props) {
 
     return (
-        <div>
+        <div className={props.className}>
             <ul>
             {props.attacks.map((attack, index) => {
                 return (<li key={index}>

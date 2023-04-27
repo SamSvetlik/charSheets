@@ -5,7 +5,7 @@ export default function NumberComponent(props){
     // You should pass it two props: The number, and a string to be rendered near it.
     // Styling will be done later through classnames.
     return (
-        <div>
+        <div className={props.className}>
             <p>{props.num}</p>
             <h2 className="bottomLabel">{props.str}</h2>
         </div>

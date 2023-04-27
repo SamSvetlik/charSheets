@@ -55,7 +55,7 @@ const Skill = (props) => {
       }
 
     return (
-        <div>
+        <div className={props.className}>
             <ul>
                 {allArray.map((entry, index)=> {
                     return (

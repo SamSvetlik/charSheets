@@ -5,7 +5,7 @@ export default function DeathSaves(props) {
         return <input type="checkbox" className="checkbox" name={labelName} ></input>
     }
     return (
-        <div>
+        <div className={props.className}>
             <form>
                 <label>Successes</label>
                     {checkbox("success")}

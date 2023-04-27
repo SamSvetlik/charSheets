@@ -2,7 +2,7 @@
 
 export default function TextComponent(props){
     return (
-        <div>
+        <div className={props.className}>
             <ul>{props.arr.map((element, index)=> {
                 return (
                 Array.isArray(element)

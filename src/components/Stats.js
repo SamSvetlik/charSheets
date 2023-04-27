@@ -4,7 +4,7 @@ const Stats = (props) => {
 
 
     return (
-        <div>
+        <div className={props.className}>
             {Object.entries(props.stats).map((item, index) => {
                 return (
                     <div key={index}>
