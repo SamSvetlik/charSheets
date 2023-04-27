@@ -17,7 +17,7 @@ export default function DeathSaves(props) {
                     {checkbox("failure")}
                     {checkbox("failure")}
             </form>
-            <h2>Death Saves</h2>
+            <h2 className="bottomLabel">Death Saves</h2>
         </div>
     )
 }

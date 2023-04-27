@@ -14,7 +14,7 @@ export default function Attacks(props) {
                 </li>)
             })}
             </ul>
-            <h2>Attacks & Spellcasting</h2>
+            <h2 className="bottomLabel">Attacks & Spellcasting</h2>
         </div>
     )
 }

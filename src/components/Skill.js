@@ -70,7 +70,7 @@ const Skill = (props) => {
                 )
                 })}
             </ul>
-            <h2>Skills</h2>
+            <h2 className="bottomLabel">Skills</h2>
         </div>
     )
 }

@@ -5,29 +5,69 @@
     "lefty mid righty"
     "lefty mid righty"
     "footer footer righty";
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
 }
 
-* {
+/* * {
   border: 1px dashed black;
-}
+} */
 
 .statSkillContainer {
   grid-area: lefty;
+  display: grid;
+  grid-template-areas: 
+  "stats proficiency"
+  "stats throws"
+  "stats throws"
+  "stats skills"
+  "stats skills"
+  "stats skills";
   width: 33%;
+  border: 1px dashed black;
+  width: fit-content;
 }
 
 .hpEtcContainer {
   grid-area: mid;
   width: 33%;
+  border: 1px dashed black;
+  width: fit-content;
 }
 
 .bioFeaturesContainer {
   grid-area: righty;
   width: 33%;
+  border: 1px dashed black;
+  width: fit-content;
 }
 
 .languageEquipmentContainer {
   grid-area: footer;
+  border: 1px dashed black;
+  width: fit-content;
+}
+
+.bottomLabel {
+  font-size: small;
+}
+
+.stats {
+  grid-area: stats;
+}
+
+.proficiencyBonus {
+  grid-area: proficiency;
+  height: fit-content;
+}
+
+.savingThrows {
+  grid-area: throws;
+}
+
+.skills {
+  grid-area: skills;
 }
 
 

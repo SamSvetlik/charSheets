@@ -22,7 +22,7 @@ const SavingThrows = (props) => {
                 )
                 })}
             </ul>
-            <h2>Saving Throws</h2>
+            <h2 className="bottomLabel">Saving Throws</h2>
         </div>
     )
 }

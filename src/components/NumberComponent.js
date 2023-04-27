@@ -7,7 +7,7 @@ export default function NumberComponent(props){
     return (
         <div>
             <p>{props.num}</p>
-            <h2>{props.str}</h2>
+            <h2 className="bottomLabel">{props.str}</h2>
         </div>
     )
 }
