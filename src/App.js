@@ -157,25 +157,35 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <>
       <Dropdown />
-      <Stats className="stats" stats={char.stats} getAbilityModifier={getAbilityModifier} />
-      <NumberComponent className="proficiencyBonus" num={char.proficiencyBonus} str="Proficiency Bonus" />
-      <SavingThrows className="savingThrows" profArray={char.throws} stats={char.stats} proficiencyBonus={char.proficiencyBonus} getAbilityModifier={getAbilityModifier} />
-      <Skill className="skills" profArray={char.skills} stats={char.stats} proficiencyBonus={char.proficiencyBonus} getAbilityModifier={getAbilityModifier} />
-      <NumberComponent className="armorClass" num={char.AC} str="Armor Class" />
-      <NumberComponent className="initiative" num={char.initiative} str="Initiative" />
-      <NumberComponent className="speed" num={char.speed} str="Speed" />
-      <NumberComponent className="maxHP" num={char.maxHP} str="Current Hit Points" />
-      <NumberComponent className="tempHP" num={0} str="Temporary Hit Points" />
-      <NumberComponent className="hitDice" num={char.hitDice} str="Hit Dice" />
-      <DeathSaves />
-      <TextComponent className="bio" arr={char.bio} str="Character Biography" />
-      <Attacks className="attacks" attacks={char.attacks} />
-      <TextComponent className="features" arr={char.features} str="Features & Traits" />
-      <NumberComponent className="passiveWisdom" num={getAbilityModifier(char.stats.WIS) + 10} str="Passive Wisdom (Perception)" />
-      <TextComponent className="equipment" arr={char.equipment} str="Equipment" />
-    </div>
+      <div className="outermostContainer">
+        <div className='statSkillContainer'>
+          <Stats className="stats" stats={char.stats} getAbilityModifier={getAbilityModifier} />
+          <NumberComponent className="proficiencyBonus" num={char.proficiencyBonus} str="Proficiency Bonus" />
+          <SavingThrows className="savingThrows" profArray={char.throws} stats={char.stats} proficiencyBonus={char.proficiencyBonus} getAbilityModifier={getAbilityModifier} />
+          <Skill className="skills" profArray={char.skills} stats={char.stats} proficiencyBonus={char.proficiencyBonus} getAbilityModifier={getAbilityModifier} />
+        </div>
+        <div className='hpEtcContainer'>
+          <NumberComponent className="armorClass" num={char.AC} str="Armor Class" />
+          <NumberComponent className="initiative" num={char.initiative} str="Initiative" />
+          <NumberComponent className="speed" num={char.speed} str="Speed" />
+          <NumberComponent className="maxHP" num={char.maxHP} str="Current Hit Points" />
+          <NumberComponent className="tempHP" num={0} str="Temporary Hit Points" />
+          <NumberComponent className="hitDice" num={char.hitDice} str="Hit Dice" />
+          <DeathSaves />
+          <Attacks className="attacks" attacks={char.attacks} />
+        </div>
+        <div className='bioFeaturesContainer'>
+        <TextComponent className="bio" arr={char.bio} str="Character Biography" />
+        <TextComponent className="features" arr={char.features} str="Features & Traits" />
+        </div>
+        <div className='languageEquipmentContainer'>
+          <NumberComponent className="passiveWisdom" num={getAbilityModifier(char.stats.WIS) + 10} str="Passive Wisdom (Perception)" />
+          <TextComponent className="equipment" arr={char.equipment} str="Equipment" />
+        </div>
+      </div>
+    </>
   );
 }
 

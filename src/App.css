@@ -1,10 +1,33 @@
-.App {
+.outermostContainer {
   text-align: center;
+  display: grid; 
+  grid-template-areas: 
+    "lefty mid righty"
+    "lefty mid righty"
+    "footer footer righty";
 }
 
 * {
   border: 1px dashed black;
 }
 
+.statSkillContainer {
+  grid-area: lefty;
+  width: 33%;
+}
+
+.hpEtcContainer {
+  grid-area: mid;
+  width: 33%;
+}
+
+.bioFeaturesContainer {
+  grid-area: righty;
+  width: 33%;
+}
+
+.languageEquipmentContainer {
+  grid-area: footer;
+}
 
 
