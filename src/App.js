@@ -173,7 +173,7 @@ function App() {
           <NumberComponent className="maxHP" num={char.maxHP} str="Current Hit Points" />
           <NumberComponent className="tempHP" num={0} str="Temporary Hit Points" />
           <NumberComponent className="hitDice" num={char.hitDice} str="Hit Dice" />
-          <DeathSaves />
+          <DeathSaves className="deathSaves"/>
           <Attacks className="attacks" attacks={char.attacks} />
         </div>
         <div className='bioFeaturesContainer'>
@@ -182,6 +182,7 @@ function App() {
         </div>
         <div className='languageEquipmentContainer'>
           <NumberComponent className="passiveWisdom" num={getAbilityModifier(char.stats.WIS) + 10} str="Passive Wisdom (Perception)" />
+          <TextComponent className="languages" arr={char.languages} str="Other Proficiencies & Languages"/>
           <TextComponent className="equipment" arr={char.equipment} str="Equipment" />
         </div>
       </div>

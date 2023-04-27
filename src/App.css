@@ -31,6 +31,14 @@
 
 .hpEtcContainer {
   grid-area: mid;
+  display: grid;
+  grid-template-areas:
+  "ac ac init init speed speed"
+  "maxHP maxHP maxHP maxHP maxHP maxHP"
+  "tempHP tempHP tempHP tempHP tempHP tempHP"
+  "hitDice hitDice hitDice deathSaves deathSaves deathSaves"
+  "attacks attacks attacks attacks attacks attacks"
+  ;
   width: 33%;
   border: 1px dashed black;
   width: fit-content;
@@ -38,6 +46,11 @@
 
 .bioFeaturesContainer {
   grid-area: righty;
+  display: grid;
+  grid-template-areas: 
+  "bio"
+  "features"
+  "features";
   width: 33%;
   border: 1px dashed black;
   width: fit-content;
@@ -45,8 +58,14 @@
 
 .languageEquipmentContainer {
   grid-area: footer;
+  display: grid;
+  grid-template-areas: 
+  "passiveWisdom equipment"
+  "languages equipment"
+  "languages equipment"
+  "languages equipment"
+  ;
   border: 1px dashed black;
-  width: fit-content;
 }
 
 .bottomLabel {
@@ -59,7 +78,6 @@
 
 .proficiencyBonus {
   grid-area: proficiency;
-  height: fit-content;
   
 }
 
@@ -71,4 +89,54 @@
   grid-area: skills;
 }
 
+.armorClass {
+  grid-area: ac;
+}
 
+.initiative {
+  grid-area: init;
+}
+
+.speed {
+  grid-area: speed;
+}
+
+.maxHP {
+  grid-area: maxHP;
+}
+
+.tempHP {
+  grid-area: tempHP;
+}
+
+.hitDice {
+  grid-area: hitDice;
+}
+
+.deathSaves {
+  grid-area: deathSaves;
+}
+
+.attacks {
+  grid-area: attacks;
+}
+
+.bio {
+  grid-area: bio;
+}
+
+.features {
+  grid-area: features;
+}
+
+.passiveWisdom {
+  grid-area: passiveWisdom;
+}
+
+.languages {
+  grid-area: languages;
+}
+
+.equipment {
+  grid-area: equipment;
+}
