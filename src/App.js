@@ -8,12 +8,13 @@ import SavingThrows from './components/SavingThrows';
 import Skill from './components/Skill';
 import Attacks from './components/Attacks';
 import DeathSaves from './components/DeathSaves';
+import CharInfo from './components/CharInfor';
 
 const memphis = {
   "name": "MEMPHIS",
   "info": {
       "name": "Memphis",
-      "class": "Barbarian",
+      "charClass": "Barbarian",
       "level": 10,
       "race" : "Harengon",
       "background": "Feylost",
@@ -158,7 +159,10 @@ function App() {
 
   return (
     <>
+      <div className='topbar'>
       <Dropdown />
+      <CharInfo info={char.info}/>
+      </div>
       <div className="outermostContainer">
         <div className='statSkillContainer'>
           <Stats className="stats" stats={char.stats} getAbilityModifier={getAbilityModifier} />

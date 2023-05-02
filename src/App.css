@@ -1,3 +1,10 @@
+.topbar {
+  border: solid 4px black;
+  text-align: center;
+  width: fit-content;
+  margin: auto;
+}
+
 .outermostContainer {
   text-align: center;
   display: grid; 
