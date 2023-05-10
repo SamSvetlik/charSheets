@@ -1,3 +1,7 @@
+li {
+  text-align: left;
+}
+
 .topbar {
   border: solid 4px black;
   text-align: center;
@@ -85,6 +89,7 @@
 
 .stats {
   grid-area: stats;
+  margin: 10px auto;
 }
 
 .proficiencyBonus {
@@ -150,4 +155,43 @@
 
 .equipment {
   grid-area: equipment;
+}
+
+.notBubbled {
+  list-style-type: circle;
+}
+
+.statbox {
+  border: 1px solid black;
+  border-radius: 0px 0px 50px 50px;
+  padding: 5px 20px;
+  margin: 10px auto;
+}
+
+.statbox > * {
+  margin: 0;
+}
+
+.statbox > h3 {
+  border: 1px solid black;
+  border-radius: 100%;
+  padding: 2px;
+  font-size: 16pt;
+}
+
+.proficiencyBonus {
+  border: 2px solid black;
+  width: fit-content;
+  margin: 5px auto;
+  padding: 5px;
+}
+
+.savingThrows {
+  border: 2px solid black;
+  margin: 5px 5px;
+}
+
+.skills {
+  border: 2px solid black;
+  margin: 5px 5px;
 }
