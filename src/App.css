@@ -195,3 +195,80 @@ li {
   border: 2px solid black;
   margin: 5px 5px;
 }
+
+.armorClass {
+  border: 2px solid black;
+  width: fit-content;
+  margin: 5px auto;
+  padding: 5px;
+  border-radius: 0px 0px 0px 20px;
+}
+
+.initiative {
+  border: 2px solid black;
+  width: fit-content;
+  margin: 5px auto;
+  padding: 5px;
+}
+
+.speed {
+  border: 2px solid black;
+  width: fit-content;
+  margin: 5px auto;
+  padding: 5px;
+  border-radius: 0px 0px 20px 0px;
+}
+
+.maxHP {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 2px solid black;
+  width: auto;
+  margin: 5px;
+}
+
+.tempHP {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 2px solid black;
+  width: auto;
+  margin: 5px;
+  padding: 5px;
+}
+
+.hitDice {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 2px solid black;
+  width: 75%;
+  margin: 5px auto;
+  padding: 5px;
+}
+
+.deathSaves {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 2px solid black;
+  width: 75%;
+  margin: 5px auto;
+  padding: 5px;
+}
+
+.attackInfo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.attackInfo > span {
+  width: 20%;
+  background-color: #d8d4b5;
+  border: 1px dotted;
+}
+
+.attackSpecial {
+  border: 2px dotted black;
+}
