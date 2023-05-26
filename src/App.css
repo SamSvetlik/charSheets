@@ -272,3 +272,9 @@ li {
 .attackSpecial {
   border: 2px dotted black;
 }
+
+.charInfo {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}

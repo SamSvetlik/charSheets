@@ -157,6 +157,11 @@ function App() {
     return modifier;
   }
 
+  function diceRoll(num) {
+    alert(Math.floor(Math.random() * num) + 1)
+  }
+
+
   return (
     <>
       <div className='topbar'>
@@ -174,7 +179,7 @@ function App() {
           <NumberComponent className="armorClass" num={char.AC} str="Armor Class" />
           <NumberComponent className="initiative" num={char.initiative} str="Initiative" />
           <NumberComponent className="speed" num={char.speed} str="Speed" />
-          <NumberComponent className="maxHP" num={char.maxHP} str="Current Hit Points" />
+          <NumberComponent className="maxHP" num={char.maxHP} str="Current Hit Points" primary="decrement" />
           <NumberComponent className="tempHP" num={0} str="Temporary Hit Points" />
           <NumberComponent className="hitDice" num={char.hitDice} str="Hit Dice" />
           <DeathSaves className="deathSaves"/>
