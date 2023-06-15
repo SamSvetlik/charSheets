@@ -5,23 +5,21 @@ export default function NumberComponent(props){
     // You should pass it two props: The number, and a string to be rendered near it.
     // Styling will be done later through classnames.
 
-    // Unfinished: Buttons that execute function based on props
-    // IE incrementing/decrementing health, rolling dice
+    // Incrementing and decrementing currently alters maxHP and tempHP properties on the character.
+    // Consider making a different component for maxHP that displays the max, but mutates a second number for current.
 
-
-    const [num, setNum] = useState(props.num)
-    const decrement = () => {
-        let copy = num
-        copy --
-        setNum(copy)
-    }
     return (
         <div className={props.className}>
-            <p>{num}</p>
-            {props.primary === "decrement"
-                ? <button onClick={decrement} >X</button>
+            <p>{props.num}</p>
+            {props.primary
+                ? <button onClick={()=> {props.primary(props.className, props.num)}} >+</button>
                 : null
             }
+            {props.secondary
+                ? <button onClick={()=> {props.secondary(props.className, props.num)}} >-</button>
+                : null
+            }
+            
             <h2 className="bottomLabel">{props.str}</h2>
         </div>
     )

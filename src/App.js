@@ -33,6 +33,7 @@ const memphis = {
   "skills": ["Animal Handling", "Athletics", "Deception", "Indimidation", "Nature", "Perception", "Survival"],
   "bio": ["Memphis wandered into the Feywild as a child. After many years, he found his way out, but the years alone and the ambient magics had changed him. He preferred to live alone in the forest, but could be persuaded to help out with promises of treats."],
   "maxHP": 125,
+  "tempHP": 0,
   "AC": 19,
   "initiative": 6,
   "speed": 40,
@@ -161,6 +162,19 @@ function App() {
     alert(Math.floor(Math.random() * num) + 1)
   }
 
+  function decrement(charKey, charValue) {
+    let copy = {...char}
+    charValue --
+    copy[charKey] = charValue
+    setChar(copy)   
+  }
+  function increment(charKey, charValue) {
+    let copy = {...char}
+    charValue ++
+    copy[charKey] = charValue
+    setChar(copy)   
+  }
+
 
   return (
     <>
@@ -179,8 +193,8 @@ function App() {
           <NumberComponent className="armorClass" num={char.AC} str="Armor Class" />
           <NumberComponent className="initiative" num={char.initiative} str="Initiative" />
           <NumberComponent className="speed" num={char.speed} str="Speed" />
-          <NumberComponent className="maxHP" num={char.maxHP} str="Current Hit Points" primary="decrement" />
-          <NumberComponent className="tempHP" num={0} str="Temporary Hit Points" />
+          <NumberComponent className="maxHP" num={char.maxHP} str="Current Hit Points" primary={increment} secondary={decrement}/>
+          <NumberComponent className="tempHP" num={char.tempHP} str="Temporary Hit Points" primary={increment} secondary={decrement}/>
           <NumberComponent className="hitDice" num={char.hitDice} str="Hit Dice" />
           <DeathSaves className="deathSaves"/>
           <Attacks className="attacks" attacks={char.attacks} />

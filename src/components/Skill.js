@@ -58,14 +58,21 @@ const Skill = (props) => {
         <div className={props.className}>
             <ul>
                 {allArray.map((entry, index)=> {
+                    let mod = getAbilityModifier(stats[getAbilityFromSkill(entry)])
+                    function diceRoll() {
+                      if (profArray.includes(entry)) {
+                        alert(Math.floor(Math.random() * 20) + 1 + proficiencyBonus+ mod)
+                      } else alert(Math.floor(Math.random() * 20) + 1 + mod)
+                    }
                     return (
                     <li key={index} className={profArray.includes(entry) 
                         ? "bubbled" 
                         : "notBubbled"} >
                         <u>{profArray.includes(entry)
-                        ? getAbilityModifier(stats[getAbilityFromSkill(entry)]) + proficiencyBonus
-                        : getAbilityModifier(stats[getAbilityFromSkill(entry)])
+                        ? mod + proficiencyBonus
+                        : mod
                         }</u> {entry}
+                        <button onClick={diceRoll} >🎲</button>
                     </li>
                 )
                 })}
