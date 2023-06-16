@@ -7,16 +7,16 @@ export default function NumberComponent(props){
 
     // Incrementing and decrementing currently alters maxHP and tempHP properties on the character.
     // Consider making a different component for maxHP that displays the max, but mutates a second number for current.
-
+    const [num, setNum] = useState(props.num)
     return (
         <div className={props.className}>
-            <p>{props.num}</p>
+            <p>{num}</p>
             {props.primary
-                ? <button onClick={()=> {props.primary(props.className, props.num)}} >+</button>
+                ? <button onClick={()=> {props.primary(num, setNum)}} >+</button>
                 : null
             }
             {props.secondary
-                ? <button onClick={()=> {props.secondary(props.className, props.num)}} >-</button>
+                ? <button onClick={()=> {props.secondary(num, setNum)}} >-</button>
                 : null
             }
             
